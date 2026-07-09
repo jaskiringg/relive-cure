@@ -1,7 +1,7 @@
 # Relive Cure — Healthcare Lead Ops (Showcase)
 
-> **Public overview only.** Application source is private.  
-> Screenshots use the real UI with **sensitive fields blurred** (names, phones, messages, URLs, rep rows).
+> **Public overview only.** Application source is private (`relive-cure-dashboard`, `relive-cure-backend`).  
+> This repo exists for portfolio reference — screenshots use the real UI with **sensitive fields blurred**.
 
 Relive Cure is a LASIK clinic I operate and the software that runs it. Two surfaces do most of the work:
 
@@ -16,7 +16,7 @@ Inbound from ads, WhatsApp, and organic social flows through qualification → C
 
 The Agent Console is not a chatbot skin. It is a **marketing operations layer**: agents run overnight, rank what matters, draft channel-specific content, and queue everything for founder approval before anything publishes.
 
-**Medical-safe by design** — publishing is gated. Nothing goes live without explicit approval. Agents can be offline; the console still shows what ran and what is waiting.
+**Medical-safe by design** — agents draft and analyze; founder approval is required before anything publishes. Publishing can be gated off entirely until explicitly enabled.
 
 ### What the agents do
 
@@ -25,51 +25,63 @@ The Agent Console is not a chatbot skin. It is a **marketing operations layer**:
 | **Monitor** | Competitor signals, market context, overnight activity digest |
 | **Rank** | Content insights scored and ordered into a growth plan |
 | **Generate** | Pipeline ideas → channel-specific drafts (Facebook, Instagram, SEO blog, reels) |
-| **Queue** | Drafts land in an inbox for review — Approve / Reject / Full editor |
-| **Publish** | WordPress, WhatsApp, Instagram, LinkedIn, Facebook (when enabled) |
+| **Queue** | Drafts land in an inbox — Approve / Reject / Full editor |
+| **Publish** | WordPress, WhatsApp, Instagram, LinkedIn, Facebook, Pinterest, Google Maps (when enabled) |
+
+### Console surfaces
+
+| Area | What you see |
+|------|----------------|
+| **Today** | Overnight digest — agent runs, pending approvals, what needs you |
+| **Ranked Ideas** | Growth plan table from overnight research |
+| **Inbox** | Draft review queue with live blog/page preview |
+| **Social Leads** | Organic inbound from IG, FB, LI, forms |
+| **Agents** | Roster, manual runs, worker status |
 
 ### Overnight loop (example)
 
 ```
 Competitor + market signals
     → agents rank insights & create pipeline ideas
-    → writers produce drafts per channel
-    → founder reviews pending drafts
+    → writers produce drafts per channel (SEO, Instagram, Facebook)
+    → founder reviews pending drafts in inbox
     → approved content publishes to organic channels
     → inbound interest routes to CRM / WhatsApp qualification
 ```
 
-Typical overnight output: ranked insights, dozens of pipeline ideas, and multiple drafts ready for approval — without manual content research each morning.
+Typical overnight output: 100+ agent runs, ranked insights, pipeline ideas, and multiple drafts ready for approval — without manual content research each morning.
 
-### Screenshot — Agent Console (same view as portfolio)
+### Screenshot — Agent Console
 
-![Agent Console — organic marketing pipeline, overnight digest, pending drafts](docs/screenshots/02-agent-console-organic-marketing.png)
+![Agent Console — overnight digest, agent runs, pending drafts, blog preview](docs/screenshots/02-agent-console-organic-marketing.png)
 
-*Agent runs, ranked insights, pipeline ideas, pending Facebook / Instagram / SEO drafts, and platform integrations. Sensitive fields blurred.*
+*Agent runs, "Needs you" queue, pending SEO/Instagram drafts with live preview, platform integrations. Sensitive fields blurred.*
 
 ---
 
 ## 2. CRM Analytics — the command center
 
-The CRM is where operations actually run: **4,800+ leads** synced from Refrens, funnel health, rep performance, SLA breaches, and channel status — one screen the sales floor and I both use daily.
+The CRM is where operations actually run: **4,900+ leads** synced from Refrens, funnel health, rep performance, SLA breaches, and channel status — one screen the sales floor and I both use daily.
 
 ### What it tracks
 
 | Area | Detail |
 |------|--------|
-| **Funnel** | Total leads, converted, lost, DNP, SLA breach counts |
-| **Lead health** | Status distribution, city breakdown, hot intent |
-| **Rep performance** | Per-rep conversion, response time, SLA, OPD booked |
-| **Channels** | WhatsApp bot status, shadow mode, pipeline live indicator |
+| **Funnel** | Total leads, converted, OPD done, lost, DNP, SLA breach counts |
+| **Lead health** | Status distribution donut — lost, active, converted, junk, hot intent |
+| **Rep performance** | Per-rep conversion, response time, SLA, OPD booked — expandable profiles |
+| **Channels** | WhatsApp bot status (off / shadow / live), token usage, Gemini model indicator |
 | **Sync** | Refrens CRM pull, CSV/Excel export, bulk download |
+| **Loss analysis** | Why we lose — information-only, DNP, budget, and other breakdowns |
+| **Week-over-week** | Conversion funnel comparison — contacted, converted, trends |
 
 Five reps run on this daily. When a workflow breaks in the morning, I see it here and ship the fix the same day — operator and engineer in one seat.
 
-### Screenshot — CRM Analytics (same view as portfolio)
+### Screenshot — CRM Analytics
 
-![CRM Analytics — funnel, lead health, rep performance](docs/screenshots/03-crm-analytics-dashboard.png)
+![CRM Analytics — funnel, lead health, rep performance, loss analysis](docs/screenshots/03-crm-analytics-dashboard.png)
 
-*Refrens-synced analytics: funnel metrics, lead health donut, rep table with conversion and SLA columns. Sensitive fields blurred.*
+*Refrens-synced analytics: KPI row, lead health donut, rep table, conversion funnel vs last week. Sensitive fields blurred.*
 
 ---
 
@@ -107,14 +119,11 @@ Organic / paid inbound          Agent-generated content
 ### Consultation chatbot (WhatsApp qualification)
 ![Chatbot operations](docs/screenshots/01-chatbot-lore-tab.png)
 
-### Lead detail panel
-![Lead panel](docs/screenshots/04-analytics-lead-panel-overview.png)
-
 ---
 
 ## Stack (high level)
 
-React · Vite · Node/Express · Supabase · WhatsApp Cloud API · Gemini · agent orchestration · Streamlit
+React · Vite · Node/Express · Supabase · WhatsApp Cloud API · Gemini · agent orchestration
 
 ---
 
@@ -125,7 +134,7 @@ React · Vite · Node/Express · Supabase · WhatsApp Cloud API · Gemini · age
 
 ## Private source (invite-only)
 
-- `relive-cure-dashboard` — CRM UI + Agent Console
+- `relive-cure-dashboard` / `relive-cure-dashboard-v2` — CRM UI + Agent Console
 - `relive-cure-backend` — API, WhatsApp engine, agent jobs
 - `lasik-whatsapp-bot` · `lead-intelligence`
 
