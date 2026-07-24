@@ -142,3 +142,9 @@ Collaborator: [@siddharth555555](https://github.com/siddharth555555)
 
 ---
 *No application source in this repository — showcase README and blurred screenshots only.*
+
+## Portfolio case studies
+
+- [Clinic ops case study](docs/portfolio/CASE_STUDY.md) (anti-clone redacted)
+- [Enterprise voice agent essay](docs/portfolio/VOICE_AGENT_ESSAY.md)
+- Atlas: https://jaskiring.up.railway.app/work/relivecure
