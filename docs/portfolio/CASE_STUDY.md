@@ -429,13 +429,13 @@ sequenceDiagram
 
 ### CRM Analytics
 
-![CRM Analytics — funnel, lead health, rep performance, loss analysis](/shots/relive-analytics.png)
+![CRM Analytics — funnel, lead health, rep performance, loss analysis](../screenshots/03-crm-analytics-dashboard.png)
 
 *Refrens-synced analytics: KPI row, lead health distribution, rep performance table, conversion funnel vs prior week. Sensitive fields blurred.*
 
 ### Agent Console
 
-![Agent Console — overnight digest, agent runs, pending drafts](/shots/relive-agent-console.png)
+![Agent Console — overnight digest, agent runs, pending drafts](../screenshots/02-agent-console-organic-marketing.png)
 
 *Overnight agent runs, approval queue, pending SEO/social drafts with preview. Sensitive fields blurred.*
 

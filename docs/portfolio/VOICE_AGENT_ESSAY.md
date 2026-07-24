@@ -2,7 +2,7 @@
 title: Deploying an Enterprise AI Voice Agent
 slug: voice-agent
 kicker: Essay · app layer vs infrastructure
-github: https://github.com/jaskiringg/relive-cure
+github: https://github.com/jaskiringg/relive-cure/blob/master/docs/portfolio/VOICE_AGENT_ESSAY.md
 live: null
 download: /docs/voice-agent.md
 ---

@@ -148,3 +148,11 @@ Collaborator: [@siddharth555555](https://github.com/siddharth555555)
 - [Clinic ops case study](docs/portfolio/CASE_STUDY.md) (anti-clone redacted)
 - [Enterprise voice agent essay](docs/portfolio/VOICE_AGENT_ESSAY.md)
 - Atlas: https://jaskiring.up.railway.app/work/relivecure
+
+---
+
+## Related essay
+
+Enterprise voice agent (app layer vs infrastructure): [docs/portfolio/VOICE_AGENT_ESSAY.md](docs/portfolio/VOICE_AGENT_ESSAY.md)
+
+**Note:** Agent Console screenshots are **organic marketing agents**. CRM voice-agent design is covered in the essay / ReliveCure case study — it is not the Agent Console UI.
