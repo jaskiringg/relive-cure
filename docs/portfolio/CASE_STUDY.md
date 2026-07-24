@@ -376,9 +376,11 @@ This section describes **what we built at the application layer** (conversation 
 
 **Parallel registry problem:** Backend also has a legacy legacy agent jobs table for marketing toggles. Two registries, one IA word ("Automations") — consolidation deferred.
 
-### Voice agent — designed, not shipped
+### Voice agent — CRM application layer (designed / evaluated; not live AI calls)
 
-**Status:** Application-layer spec complete ([VOICE-AGENT.md internal]); **no production voice deployment**.
+**Status:** Application-layer design and evaluation complete for **ReliveCure CRM** (inbound/outbound qualification, RAG roles, CRM writeback). **No production AI voice agent calls** yet. Separate from the **marketing Agent Console** (organic content agents).
+
+**What shipped for calls today:** Rep Android app uploads recordings → local transcribe → call recordings + lead timeline events (Lore can read these). That is call capture, not a live AI voice loop.
 
 **Designed scope (what we would own):**
 
@@ -388,9 +390,11 @@ This section describes **what we built at the application layer** (conversation 
 | RAG design | Ours | Three stores: knowledge vectors (insurance/pricing), playbook vectors (winning call closers), lead memory (CRM + WhatsApp history) |
 | Orchestration workflows | Ours | Outbound queue, inbound routing, CRM writeback to same tables as WhatsApp bot |
 | Telephony (PSTN/SIP) | Rent | Wholesale SIP trunk — physics + regulation |
-| STT engine | Rent or self-host | Deepgram or faster-whisper — **not our IP** |
-| LLM inference | Rent | Groq (separate from maxed Google pools used by WhatsApp) — **not our IP** |
-| TTS engine | Rent | Engine selection pending (Hindi quality is make-or-break) — **not our IP** |
+| STT engine | Rent or self-host | Commodity ASR — **not our IP** |
+| LLM inference | Rent | Separate pool from WhatsApp bots — **not our IP** |
+| TTS engine | Rent | Hindi quality is make-or-break — **not our IP** |
+
+**Cross-links:** [Voice agent essay](/work/voice-agent) · Salescode enterprise voice delivery in [Salescode lifecycle](/work/salescode#enterprise-voice-agents-application-layer).
 
 **Designed per-turn flow:**
 

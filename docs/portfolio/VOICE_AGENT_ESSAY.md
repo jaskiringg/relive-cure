@@ -11,7 +11,11 @@ download: /docs/voice-agent.md
 
 **Thesis:** Most teams conflate "voice AI" with picking a vendor stack. That confusion hides where value actually lives. **Telephony, STT, LLM, and TTS are rented infrastructure.** Discovery, conversation design, qualification logic, business rules, RAG architecture, tool contracts, escalation, testing, and rollout are **application work** — and that is what determines whether a voice agent converts or burns leads.
 
-This essay separates the two layers, uses ReliveCure's voice design as a evaluated-but-not-shipped example, and references Salescode enterprise voice-agent support as application-layer delivery work in a multi-tenant SaaS context.
+This essay separates the two layers.
+
+**Where I did the work**
+- **Salescode** — enterprise voice-agent support in SaaS rollouts (requirements, conversation/qualification rules, workflow alignment, UAT). Shipped in customer context as application-layer delivery.
+- **ReliveCure CRM** — designed and evaluated the CRM voice application layer (conversation, three-store RAG roles, CRM writeback). **Not** live AI voice calls yet; call upload → transcribe → timeline already ships. Distinct from the marketing Agent Console.
 
 **What this is not:** a LiveKit/SIP rebuild recipe, full prompt text, vector index schemas, or vendor API clone-and-run instructions.
 
